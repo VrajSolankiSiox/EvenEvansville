@@ -14,7 +14,7 @@ export function Header() {
       <Link
         href="/"
         onClick={() => setMenuOpen(false)}
-        className="absolute left-8 top-1/2 z-10 hidden -translate-y-1/2 items-center sm:flex"
+        className="absolute left-8 top-1/2 z-10 hidden -translate-y-1/2 items-center lg:flex"
         aria-label={`${hotelName} home`}
       >
         <Image
@@ -29,54 +29,59 @@ export function Header() {
 
       <Link
         href="/contact"
-        className="absolute right-8 top-1/2 z-10 hidden -translate-y-1/2 whitespace-nowrap rounded-full bg-[#063f49] px-5 py-3 text-xs font-bold uppercase tracking-[0.06em] text-white transition hover:bg-[#17211f] sm:flex"
+        className="absolute right-8 top-1/2 z-10 hidden -translate-y-1/2 whitespace-nowrap rounded-full bg-[#063f49] px-5 py-3 text-xs font-bold uppercase tracking-[0.06em] text-white transition hover:bg-[#17211f] lg:flex"
       >
         Book your stay
       </Link>
 
       {/* Top row: hamburger | centered hotel name | mobile CTA */}
-      <div className="mx-auto grid max-w-7xl grid-cols-[44px_1fr_44px] items-center gap-2 px-4 py-3 sm:flex sm:justify-center sm:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-8">
         {/* Hamburger — mobile only */}
-        <button
-          type="button"
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          onClick={() => setMenuOpen((v) => !v)}
-          className="flex h-10 w-10 flex-col items-center justify-center gap-[5px] sm:hidden"
-        >
-          <span
-            className={`block h-[1.5px] w-6 bg-[#1d2523] transition-all duration-300 ${
-              menuOpen ? "translate-y-[6.5px] rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`block h-[1.5px] w-6 bg-[#1d2523] transition-all duration-300 ${
-              menuOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block h-[1.5px] w-6 bg-[#1d2523] transition-all duration-300 ${
-              menuOpen ? "-translate-y-[6.5px] -rotate-45" : ""
-            }`}
-          />
-        </button>
+        <div className="flex w-20 shrink-0 justify-start lg:hidden">
+          <button
+            type="button"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMenuOpen((v) => !v)}
+            className="flex h-10 w-10 flex-col items-center justify-center gap-[5px]"
+          >
+            <span
+              className={`block h-[1.5px] w-6 bg-[#1d2523] transition-all duration-300 ${
+                menuOpen ? "translate-y-[6.5px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`block h-[1.5px] w-6 bg-[#1d2523] transition-all duration-300 ${
+                menuOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`block h-[1.5px] w-6 bg-[#1d2523] transition-all duration-300 ${
+                menuOpen ? "-translate-y-[6.5px] -rotate-45" : ""
+              }`}
+            />
+          </button>
+        </div>
 
         {/* Hotel name */}
-        <Link
-          href="/"
-          onClick={() => setMenuOpen(false)}
-          className="justify-self-center text-center font-serif text-base font-semibold leading-tight tracking-[-0.04em] sm:text-2xl xl:text-3xl"
-        >
-          {hotelName}
-        </Link>
+        <div className="flex flex-1 justify-center overflow-hidden">
+          <Link
+            href="/"
+            onClick={() => setMenuOpen(false)}
+            className="truncate text-center font-serif text-[14px] font-semibold leading-tight tracking-[-0.04em] sm:text-xl md:text-2xl xl:text-3xl"
+          >
+            {hotelName}
+          </Link>
+        </div>
 
         {/* CTA */}
-        <Link
-          href="/contact"
-          className="justify-self-end whitespace-nowrap rounded-full bg-[#063f49] px-3 py-2 text-[0.6rem] font-bold uppercase tracking-[0.06em] text-white transition hover:bg-[#17211f] sm:hidden"
-        >
-          <span className="sm:hidden">Book</span>
-          <span className="hidden sm:inline">Book your stay</span>
-        </Link>
+        <div className="flex w-20 shrink-0       justify-end lg:hidden">
+          <Link
+            href="/contact"
+            className="whitespace-nowrap rounded-full px-6 py-2  bg-[#063f49]  text-[10px] font-bold uppercase tracking-[0.06em] text-white transition hover:bg-[#17211f]"
+          >
+            Book
+          </Link>
+        </div>
       </div>
 
       {/* Desktop nav */}
@@ -94,7 +99,7 @@ export function Header() {
 
       {/* Mobile slide-down drawer */}
       <div
-        className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:hidden ${
+        className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden ${
           menuOpen ? "max-h-96" : "max-h-0"
         }`}
       >
