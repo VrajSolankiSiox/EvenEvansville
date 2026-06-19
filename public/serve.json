@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/about/__next.about.__PAGE__.txt",
+      "destination": "/about/__next.about/__PAGE__.txt"
+    },
+    {
+      "source": "/contact/__next.contact.__PAGE__.txt",
+      "destination": "/contact/__next.contact/__PAGE__.txt"
+    },
+    {
+      "source": "/services/__next.services.__PAGE__.txt",
+      "destination": "/services/__next.services/__PAGE__.txt"
+    }
+  ]
+}
