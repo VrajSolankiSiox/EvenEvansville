@@ -47,7 +47,7 @@ export function ContactForm() {
         </div>
       )}
 
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid gap-5 sm:grid-cols-2">
         <label className="grid gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-[#68706b]">
           Name
           <input
@@ -68,7 +68,7 @@ export function ContactForm() {
           />
         </label>
       </div>
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid gap-5 sm:grid-cols-2">
         <label className="grid gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-[#68706b]">
           Arrival
           <input

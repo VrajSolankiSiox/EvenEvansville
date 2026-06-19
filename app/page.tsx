@@ -15,7 +15,7 @@ export default function Home() {
             alt="Comfortable guest room with warm welcoming interiors"
             fill
             priority
-            quality={100}
+            quality={85}
             className="object-cover"
             sizes="100vw"
           />
@@ -87,11 +87,13 @@ export default function Home() {
                 />
               </div>
               <div className="max-w-4xl animate-rise">
-                <p className="text-center font-serif text-4xl text-[#063f49]">
+                {/* <p className="text-center font-serif text-4xl text-[#063f49]">
                   E
-                </p>
+                </p> */}
                 <h2 className="mt-6 max-w-3xl font-serif text-[clamp(2.2rem,5vw,3rem)] leading-[1.02] tracking-[-0.06em] text-[#1d2523]">
-                  {hotelName} combines comfortable guest accommodations with a friendly 24-hour front desk, creating a welcoming and relaxing stay.
+                  {hotelName} combines comfortable guest accommodations with a
+                  friendly 24-hour front desk, creating a welcoming and relaxing
+                  stay.
                 </h2>
               </div>
             </div>
@@ -120,7 +122,8 @@ export default function Home() {
                 </h2>
               </div>
               <p className="max-w-sm text-sm leading-7 text-[#68706b]">
-                Explore our rooms and suites, from well-equipped kitchenettes to our relaxing jetted tub suite.
+                Explore our rooms and suites, from well-equipped kitchenettes to
+                our relaxing jetted tub suite.
               </p>
             </div>
             <RoomCarousel />
@@ -171,12 +174,16 @@ export default function Home() {
         <section className="bg-[#063f49] px-5 py-20 text-white sm:px-8">
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div className="animate-rise">
-              <p className="eyebrow text-[#e8d8b8]">Welcoming & Accommodating</p>
+              <p className="eyebrow text-[#e8d8b8]">
+                Welcoming & Accommodating
+              </p>
               <h2 className="mt-4 font-serif text-[clamp(2.6rem,6vw,6rem)] leading-[0.95] tracking-[-0.07em]">
                 A relaxing stay with exceptional guest services.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">
-                With a 24-hour front desk, daily housekeeping, free self-parking (including RV, bus, and truck spaces), and pet-friendly room options, we accommodate all your travel needs.
+                With a 24-hour front desk, daily housekeeping, free self-parking
+                (including RV, bus, and truck spaces), and pet-friendly room
+                options, we accommodate all your travel needs.
               </p>
               <Link href="/services" className="soft-button mt-8">
                 Explore services

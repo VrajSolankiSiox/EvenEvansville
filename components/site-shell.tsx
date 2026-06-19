@@ -177,21 +177,35 @@ export function Footer() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#e8d8b8]">
             Visit
           </p>
-          <p className="mt-4 text-sm leading-7 text-white/62">
+          <a
+            href="https://maps.google.com/?q=715+Brown+School+Rd,+Evansville,+WI+53536"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 block text-sm leading-7 text-white/62 hover:text-white/90 transition-colors"
+          >
             715 Brown School Rd
             <br />
             Evansville, WI 53536
-          </p>
+          </a>
         </div>
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#e8d8b8]">
             Contact
           </p>
-          <p className="mt-4 text-sm leading-7 text-white/62">
-            evansville.suites@gmail.com
-            <br />
-            +1 608-882-1295
-          </p>
+          <div className="mt-4 text-sm leading-7 text-white/62">
+            <a
+              href="mailto:reservations@evansvilleinn.com"
+              className="block hover:text-white/90 transition-colors"
+            >
+              reservations@evansvilleinn.com
+            </a>
+            <a
+              href="tel:+16088821295"
+              className="block hover:text-white/90 transition-colors"
+            >
+              +1 608-882-1295
+            </a>
+          </div>
         </div>
       </div>
     </footer>

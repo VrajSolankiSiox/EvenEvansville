@@ -15,7 +15,7 @@ export default function ContactPage() {
       <Header />
       <main>
         <PageIntro
-          eyebrow="Contact us"
+          eyebrow=""
           title="Plan your stay in Evansville."
           text="For reservations, special requests, or pet-friendly accommodations, send a note and our front desk team will prepare the details."
         />

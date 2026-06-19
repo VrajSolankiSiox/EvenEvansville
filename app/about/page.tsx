@@ -31,7 +31,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="relative min-h-[520px]">
-            <Image src={images.parking} alt="Hotel exterior" fill quality={100} className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
+            <Image src={images.parking} alt="Hotel exterior" fill priority quality={85} className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
           </div>
         </section>
         <section className="bg-[#063f49] px-5 py-20 text-white sm:px-8">
