@@ -53,9 +53,9 @@ export default function RootLayout({
       <body className="min-h-full">
         <LuxuryCursor />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
-      <Analytics />
-      <SpeedInsights />
     </html>
   );
 }
