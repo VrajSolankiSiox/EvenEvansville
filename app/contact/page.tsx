@@ -34,10 +34,10 @@ export default function ContactPage() {
                 <p>
                   <strong className="block text-[#1d2523]">Email</strong>
                   <a
-                    href="mailto:evansville.suites@gmail.com"
+                    href="mailto:reservations@evansvilleinn.com"
                     className="hover:underline"
                   >
-                    evansville.suites@gmail.com
+                    reservations@evansvilleinn.com
                   </a>
                 </p>
                 <p>
