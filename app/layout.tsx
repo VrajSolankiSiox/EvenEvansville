@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://evansvilleinnandsuites.com"),
+  metadataBase: new URL("https://evansvilleinn.com"),
   title: {
     template: "%s | Evansville Inn & Suites",
     default: "Evansville Inn & Suites | Evansville, Wisconsin",

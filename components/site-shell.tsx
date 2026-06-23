@@ -2,11 +2,44 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { MouseEvent, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { hotelName, navItems } from "@/lib/hotel-data";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [pendingHref, setPendingHref] = useState<string | null>(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!menuOpen && pendingHref) {
+      const timeoutId = window.setTimeout(() => {
+        router.push(pendingHref);
+        setPendingHref(null);
+      }, 500);
+
+      return () => window.clearTimeout(timeoutId);
+    }
+
+    return undefined;
+  }, [menuOpen, pendingHref, router]);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  const handleNavigation = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    event.preventDefault();
+    if (menuOpen) {
+      setPendingHref(href);
+      closeMenu();
+    } else {
+      router.push(href);
+    }
+  };
 
   return (
     <header className="fixed py-2 inset-x-0 top-0 z-50 border-b border-[#0b4650]/10 bg-[#f8f3e9]/95 backdrop-blur-3xl text-[#1c2523]  ">
@@ -37,7 +70,7 @@ export function Header() {
       {/* Top row: hamburger | centered hotel name | mobile CTA */}
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-8">
         {/* Hamburger — mobile only */}
-        <div className="flex w-20 shrink-0 justify-start lg:hidden">
+        <div className="flex w-fit shrink-0 justify-start   lg:hidden">
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -63,7 +96,7 @@ export function Header() {
         </div>
 
         {/* Hotel name */}
-        <div className="flex flex-1 justify-center overflow-hidden">
+        <div className="flex flex-1 justify-center overflow-hidden  ">
           <Link
             href="/"
             onClick={() => setMenuOpen(false)}
@@ -74,10 +107,10 @@ export function Header() {
         </div>
 
         {/* CTA */}
-        <div className="flex w-20 shrink-0       justify-end lg:hidden">
+        <div className="flex w-20 shrink-0 justify-end lg:hidden">
           <Link
             href="/contact"
-            className="whitespace-nowrap rounded-full px-6 py-2  bg-[#063f49]  text-[10px] font-bold uppercase tracking-[0.06em] text-white transition hover:bg-[#17211f]"
+            className="whitespace-nowrap rounded-full px-6 py-2 bg-[#063f49] text-[10px] font-bold uppercase tracking-[0.06em] text-white transition hover:bg-[#17211f]"
           >
             Book
           </Link>
@@ -123,7 +156,7 @@ export function Header() {
               >
                 <Link
                   href={item.href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(event) => handleNavigation(event, item.href)}
                   className="group flex items-center gap-4 py-4"
                 >
                   <span className="text-[0.58rem] font-bold tracking-[0.22em] text-[#9f563f]">
@@ -146,7 +179,7 @@ export function Header() {
           >
             <Link
               href="/contact"
-              onClick={() => setMenuOpen(false)}
+              onClick={(event) => handleNavigation(event, "/contact")}
               className="flex items-center justify-center gap-2 rounded-full bg-[#063f49] px-6 py-3.5 text-xs font-bold uppercase tracking-[0.12em] text-white shadow-[0_8px_28px_rgba(6,63,73,0.22)] transition hover:bg-[#17211f]"
             >
               Book your stay
@@ -224,9 +257,13 @@ export function PageIntro({
   return (
     <section className="page-intro">
       <div className="mx-auto max-w-4xl px-5 text-center sm:px-8">
-        <p className="">{eyebrow}</p>
-        <h1>{title}</h1>
-        <p>{text}</p>
+        {eyebrow ? (
+          <p className="animate-rise text-sm font-semibold uppercase tracking-[0.22em] text-[#e8d8b8]">
+            {eyebrow}
+          </p>
+        ) : null}
+        <h1 className="animate-rise mt-6">{title}</h1>
+        <p className="animate-rise [animation-delay:120ms]">{text}</p>
       </div>
     </section>
   );

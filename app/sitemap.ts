@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://evansvilleinnandsuites.com"; // Update this when you have your final domain
+  const baseUrl = "https://evansvilleinn.com";
 
   return [
     {
