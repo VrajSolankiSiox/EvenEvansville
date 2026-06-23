@@ -12,12 +12,13 @@ export function ContactForm() {
     setIsPending(true);
     setResult(null);
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const response = await sendContactEmail(formData);
     setResult(response);
     
     if (response.success) {
-      event.currentTarget.reset();
+      form.reset();
     }
     setIsPending(false);
   }
