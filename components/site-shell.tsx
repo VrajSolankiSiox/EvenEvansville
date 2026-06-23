@@ -230,7 +230,7 @@ export function Footer() {
               href="mailto:reservations@evansvilleinn.com"
               className="block hover:text-white/90 transition-colors"
             >
-              reservations@evansvilleinn.com
+              evansville.suites@gmail.com
             </a>
             <a
               href="tel:+16088821295"
