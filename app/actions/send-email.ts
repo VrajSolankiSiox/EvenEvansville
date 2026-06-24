@@ -92,12 +92,7 @@ export async function sendContactEmail(formData: FormData) {
                             </h2>
                             
                             <!-- Decorative Divider -->
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" style="margin-bottom: 25px;">
-                                <tr>
-                                    <td height="2" style="background-color: #2563eb; width: 40px; font-size: 0; line-height: 0;">&nbsp;</td>
-                                    <td height="1" style="background-color: #e2e8f0; font-size: 0; line-height: 0;">&nbsp;</td>
-                                </tr>
-                            </table>
+                        
 
                             <!-- Reservation Summary Table -->
                             <table class="summary-table" border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation" style="width: 100%; border-collapse: separate; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin-bottom: 30px; background-color: #ffffff;">
