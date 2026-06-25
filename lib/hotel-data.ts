@@ -87,11 +87,11 @@ export const stats = [
 export const locationHighlights = [
   {
     title: "Near Janesville",
-    description: "Looking for hotels near Janesville WI? We are located just ~20 minutes away, offering better rates and quieter accommodations.",
+    description: "Looking for hotels near Janesville WI? We are located just around 20 minutes away, offering better rates and quieter accommodations.",
   },
   {
     title: "Close to Madison",
-    description: "If you need affordable hotels near Madison WI, our location is ideal—only a 30-minute drive to the capital city.",
+    description: "If you need affordable hotels near Madison WI, our location is ideal, only a 30-minute drive to the capital city.",
   },
   {
     title: "Leonard Leota Park",
