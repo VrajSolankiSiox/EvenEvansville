@@ -33,8 +33,8 @@ export const images = {
 
 export const services = [
   {
-    title: "Comfortable Lodging",
-    text: "Select from 31 guest rooms and suites, including well-appointed kitchenette units and a premier suite with a relaxing jetted tub.",
+    title: "Extended Stay Lodging",
+    text: "Select from 31 guest rooms, offering Evansville WI hotels with kitchenettes and weekly rate accommodations Evansville WI for longer visits.",
     image: images.suite,
   },
   {
@@ -72,7 +72,7 @@ export const roomImages = [
   },
   {
     title: "Pet-Friendly Room",
-    detail: "Warm, accommodating guest rooms for your pets (additional charges may apply depending on room type).",
+    detail: "Warm, accommodating guest rooms for your pets. We're proud to be one of the top pet friendly hotels in Evansville WI.",
     image: images.pet,
   },
 ];
@@ -84,3 +84,21 @@ export const stats = [
   { value: "100%", label: "non-smoking rooms" },
 ];
 
+export const locationHighlights = [
+  {
+    title: "Near Janesville",
+    description: "Looking for hotels near Janesville WI? We are located just ~20 minutes away, offering better rates and quieter accommodations.",
+  },
+  {
+    title: "Close to Madison",
+    description: "If you need affordable hotels near Madison WI, our location is ideal—only a 30-minute drive to the capital city.",
+  },
+  {
+    title: "Leonard Leota Park",
+    description: "Searching for hotels near Leonard Leota Park? We are minutes away from this historic park and local events.",
+  },
+  {
+    title: "Easy Highway Access",
+    description: "As one of the premier hotels off Highway 14 Wisconsin, we provide a perfect contractor-friendly stay with extended-stay kitchenette suites.",
+  },
+];
