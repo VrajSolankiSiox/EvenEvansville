@@ -2,7 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { RoomCarousel } from "@/components/room-carousel";
 import { Footer, Header } from "@/components/site-shell";
-import { hotelName, images, services, stats, locationHighlights } from "@/lib/hotel-data";
+import {
+  hotelName,
+  images,
+  services,
+  stats,
+  locationHighlights,
+} from "@/lib/hotel-data";
 
 export default function Home() {
   return (
@@ -38,7 +44,9 @@ export default function Home() {
               <h1 className="animate-rise font-serif text-[clamp(2.8rem,6.8vw,6.2rem)] leading-[0.92] tracking-[-0.05em] text-white">
                 Comfortable
                 <br />
-                Hotels in
+                rooms & suites
+                <br />
+                in the heart of
                 <br />
                 Evansville WI
               </h1>
@@ -89,7 +97,10 @@ export default function Home() {
                   E
                 </p> */}
                 <h2 className="mt-6 max-w-3xl font-serif text-[clamp(2.2rem,5vw,3rem)] leading-[1.02] tracking-[-0.06em] text-[#1d2523]">
-                  As one of the premier places to stay in Evansville WI, {hotelName} combines comfortable lodging with a 24-hour front desk. Whether searching for top Evansville WI hotels or motels in Evansville WI, we offer a welcoming stay.
+                  As one of the premier places to stay in Evansville WI,{" "}
+                  {hotelName} combines comfortable lodging with a 24-hour front
+                  desk. Whether searching for top Evansville WI hotels or motels
+                  in Evansville WI, we offer a welcoming stay.
                 </h2>
               </div>
             </div>
@@ -207,9 +218,17 @@ export default function Home() {
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {locationHighlights.map((highlight, index) => (
-                <div key={highlight.title} className="animate-rise border-t border-[#063f49]/10 pt-6" style={{ animationDelay: `${index * 90}ms` }}>
-                  <h3 className="font-serif text-2xl tracking-[-0.03em] text-[#063f49]">{highlight.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-[#68706b]">{highlight.description}</p>
+                <div
+                  key={highlight.title}
+                  className="animate-rise border-t border-[#063f49]/10 pt-6"
+                  style={{ animationDelay: `${index * 90}ms` }}
+                >
+                  <h3 className="font-serif text-2xl tracking-[-0.03em] text-[#063f49]">
+                    {highlight.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-[#68706b]">
+                    {highlight.description}
+                  </p>
                 </div>
               ))}
             </div>
