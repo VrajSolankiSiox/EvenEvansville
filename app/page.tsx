@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RoomCarousel } from "@/components/room-carousel";
 import { Footer, Header } from "@/components/site-shell";
-import { hotelName, images, services, stats } from "@/lib/hotel-data";
+import { hotelName, images, services, stats, locationHighlights } from "@/lib/hotel-data";
 
 export default function Home() {
   return (
@@ -38,11 +38,9 @@ export default function Home() {
               <h1 className="animate-rise font-serif text-[clamp(2.8rem,6.8vw,6.2rem)] leading-[0.92] tracking-[-0.05em] text-white">
                 Comfortable
                 <br />
-                rooms & suites
+                Hotels in
                 <br />
-                in the heart of
-                <br />
-                Evansville
+                Evansville WI
               </h1>
 
               <Link
@@ -91,9 +89,7 @@ export default function Home() {
                   E
                 </p> */}
                 <h2 className="mt-6 max-w-3xl font-serif text-[clamp(2.2rem,5vw,3rem)] leading-[1.02] tracking-[-0.06em] text-[#1d2523]">
-                  {hotelName} combines comfortable guest accommodations with a
-                  friendly 24-hour front desk, creating a welcoming and relaxing
-                  stay.
+                  As one of the premier places to stay in Evansville WI, {hotelName} combines comfortable lodging with a 24-hour front desk. Whether searching for top Evansville WI hotels or motels in Evansville WI, we offer a welcoming stay.
                 </h2>
               </div>
             </div>
@@ -197,6 +193,25 @@ export default function Home() {
                 className="object-cover"
                 sizes="(min-width: 1024px) 42vw, 100vw"
               />
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#ebe9df] px-5 py-20 text-[#1d2523] sm:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="max-w-3xl">
+              <p className="eyebrow">Location & Attractions</p>
+              <h2 className="mt-4 font-serif text-[clamp(2.4rem,5vw,5.2rem)] leading-[0.98] tracking-[-0.07em]">
+                Perfectly situated for your Wisconsin travels.
+              </h2>
+            </div>
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {locationHighlights.map((highlight, index) => (
+                <div key={highlight.title} className="animate-rise border-t border-[#063f49]/10 pt-6" style={{ animationDelay: `${index * 90}ms` }}>
+                  <h3 className="font-serif text-2xl tracking-[-0.03em] text-[#063f49]">{highlight.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-[#68706b]">{highlight.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
