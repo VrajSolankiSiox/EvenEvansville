@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Comforts & Services",
   description:
     "Explore the comforts and services at Evansville Inn & Suites. Discover our 24-hour front desk, fitness facility, and free on-site self-parking.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function ServicesPage() {

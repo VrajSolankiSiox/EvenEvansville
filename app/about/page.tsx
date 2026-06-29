@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Learn about Evansville Inn & Suites. We offer convenient amenities, in-room kitchenettes, daily housekeeping, and pet-friendly rooms.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Contact & Reservations",
   description:
     "Contact Evansville Inn & Suites for reservations, special requests, or pet-friendly accommodations. Our 24-hour front desk team is ready to assist you.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {
